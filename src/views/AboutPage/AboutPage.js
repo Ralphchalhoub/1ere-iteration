@@ -21,7 +21,7 @@ export default function aboutsection() {
           </h4>
           <h2 className={classes.title}>Mission</h2>
           <h4>
-            our mission is to provide you with the unique shopping experience by
+            Our mission is to provide you with the unique shopping experience by
             offering the latest trend with the professional and friendly service
           </h4>
         </GridItem>
