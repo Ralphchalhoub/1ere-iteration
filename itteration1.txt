@@ -1,0 +1,20 @@
+creation d'un online shop
+
+template used from moodle 
+
+components.js joue le role de App.js dans src
+src->views-> aboutpage
+          -> bagpage
+          ->Components: aboutsection
+                        sectioncarousel
+                        sectionlogin
+                        sectionnavbar
+           -landingpage : page for products in navbar
+           -loginpage
+           -aboutpage
+           -bagpage
+     index.html: generates routers
+
+src->assets->jss
+     
+jss : styling ( templates's jss  modified)
