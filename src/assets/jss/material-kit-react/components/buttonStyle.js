@@ -21,7 +21,7 @@ const buttonStyle = {
     position: "sticky",
     padding: "20px 30px",
     margin: "auto",
-    fontSize: "5px",
+    fontSize: "15px",
     fontWeight: "100",
     textTransform: "uppercase",
     letterSpacing: "0",

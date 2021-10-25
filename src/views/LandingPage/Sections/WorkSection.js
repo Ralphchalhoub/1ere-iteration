@@ -20,7 +20,7 @@ export default function WorkSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem cs={12} sm={12} md={8}>
-          <h2 className={classes.title}>not listed items</h2>
+          <h2 className={classes.title}>Not listed items</h2>
           <h4 className={classes.description}>
             Divide details about your product or agency work into parts. Write a
             few lines about each one and contact us about any further

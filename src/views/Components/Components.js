@@ -12,7 +12,6 @@ import SectionCarousel from "./Sections/SectionCarousel.js";
 //import SectionLogin from "./Sections/SectionLogin.js";
 
 import styles from "assets/jss/material-kit-react/views/components.js";
-import SectionTabs from "./Sections/SectionTabs.js";
 //import SectionJavascript from "./Sections/SectionJavascript.js";
 
 const useStyles = makeStyles(styles);
@@ -23,7 +22,6 @@ export default function Components() {
     <div className={classNames(classes.main, classes.mainRaised)}>
       <SectionNavbars />
       <SectionCarousel />
-      <SectionTabs />
     </div>
   );
 }
