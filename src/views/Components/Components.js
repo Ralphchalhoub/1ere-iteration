@@ -16,6 +16,7 @@ import styles from "assets/jss/material-kit-react/views/components.js";
 //import SectionJavascript from "./Sections/SectionJavascript.js";
 import { useSelector, useDispatch } from "react-redux";
 import { increment } from "actions";
+import SectionTabs from "./Sections/SectionTabs.js";
 
 const useStyles = makeStyles(styles);
 
@@ -30,6 +31,7 @@ export default function Components() {
       <h1>counter{counter}</h1>
       <Button onclick={() => dispatch(increment(1))}>press me+</Button>
       <Button onclick={() => dispatch(increment(1))}>press me-</Button>
+      <SectionTabs />
     </div>
   );
 }
