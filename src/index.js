@@ -12,19 +12,35 @@ import ProfilePage from "views/ProfilePage/ProfilePage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
 import AboutPage from "views/AboutPage/AboutPage.js";
 import BagPage from "views/BagPage/BagPage.js";
+import shirtspage from "views/shirtspage/shirts";
+import dressespage from "views/dressespage/dresses";
+import shoespage from "views/shoespage/shoes";
+import { createStore } from "redux";
+import allreducers from "reducers";
+import { Provider } from "react-redux";
 
 var hist = createBrowserHistory();
+const store = createStore(
+  allreducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 ReactDOM.render(
-  <Router history={hist}>
-    <Switch>
-      <Route path="/landing-page" component={LandingPage} />
-      <Route path="/profile-page" component={ProfilePage} />
-      <Route path="/login-page" component={LoginPage} />
-      <Route path="/about-page" component={AboutPage} />
-      <Route path="/bag-page" component={BagPage} />
-      <Route path="/" component={Components} />
-    </Switch>
-  </Router>,
+  <Provider store={store}>
+    <Router history={hist}>
+      <Switch>
+        <Route path="/landing-page" component={LandingPage} />
+        <Route path="/profile-page" component={ProfilePage} />
+        <Route path="/login-page" component={LoginPage} />
+        <Route path="/about-page" component={AboutPage} />
+        <Route path="/bag-page" component={BagPage} />
+        <Route path="/shirts-page" component={shirtspage} />
+        <Route path="/dresses-page" component={dressespage} />
+        <Route path="/shoes-page" component={shoespage} />
+        <Route path="/" component={Components} />
+      </Switch>
+    </Router>
+    ,
+  </Provider>,
   document.getElementById("root")
 );

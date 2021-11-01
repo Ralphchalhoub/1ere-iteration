@@ -3,6 +3,7 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 
 // @material-ui/icons
 
@@ -39,10 +40,9 @@ export default function TeamSection() {
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                 <img src={image1} alt="..." className={imageClasses} />
               </GridItem>
-              <h4 className={classes.cardTitle}>
+              <Link to={"/shirts-page"} className={classes.link}>
                 shirts
-                <br />
-              </h4>
+              </Link>
               {/* <CardFooter className={classes.justifyCenter}>
                 <Button
                   justIcon
@@ -73,10 +73,9 @@ export default function TeamSection() {
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                 <img src={dresses} alt="..." className={imageClasses} />
               </GridItem>
-              <h4 className={classes.cardTitle}>
+              <Link to={"/dresses-page"} className={classes.link}>
                 Dresses
-                <br />
-              </h4>
+              </Link>
               {/* <CardBody>
                 <p className={classes.description}>
                   You can write here details about one of your team members. You
@@ -108,10 +107,9 @@ export default function TeamSection() {
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                 <img src={shoes} alt="..." className={imageClasses} />
               </GridItem>
-              <h4 className={classes.cardTitle}>
-                shoes
-                <br />
-              </h4>
+              <Link to={"/shoes-page"} className={classes.link}>
+                Shoes
+              </Link>
               {/* <CardBody>
                 <p className={classes.description}>
                   You can write here details about one of your team members. You
