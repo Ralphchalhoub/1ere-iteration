@@ -12,6 +12,7 @@ import ProfilePage from "views/ProfilePage/ProfilePage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
 import AboutPage from "views/AboutPage/AboutPage.js";
 import BagPage from "views/BagPage/BagPage.js";
+import registerPage from "views/registerPage/register";
 import shirtspage from "views/shirtspage/shirts";
 import dressespage from "views/dressespage/dresses";
 import shoespage from "views/shoespage/shoes";
@@ -37,6 +38,7 @@ ReactDOM.render(
         <Route path="/shirts-page" component={shirtspage} />
         <Route path="/dresses-page" component={dressespage} />
         <Route path="/shoes-page" component={shoespage} />
+        <Route path="/register-page" component={registerPage} />
         <Route path="/" component={Components} />
       </Switch>
     </Router>
