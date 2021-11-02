@@ -11,6 +11,7 @@ import classNames from "classnames";
 import { useSelector, useDispatch } from "react-redux";
 import { increment } from "actions";
 import { Button } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles(styles);
 
@@ -28,13 +29,31 @@ export default function aboutsection() {
       <GridContainer justify="center">
         <GridItem cs={12} sm={12} md={8}>
           <h2>lets make a difference</h2>
-          <h2>photo1</h2>
-          <img src={image1} alt="..." className={imageClasses} />
-          <h1>quantity{counter}</h1>
-          <Button onclick={() => dispatch(increment(1))}>+</Button>
-          <Button onclick={() => dispatch(increment(1))}>-</Button>
-          <h1>photo2</h1>
-          <img src={dresses} alt="..." className={imageClasses} />
+          <GridContainer>
+            <GridItem>
+              <img src={image1} alt="..." className={imageClasses} />
+              <h1>quantity{counter}</h1>
+              <Button onclick={() => dispatch(increment(1))}>+</Button>
+              <Button type="button" color="primary">
+                quantity
+              </Button>
+              <Button onclick={() => dispatch(increment(1))}>-</Button>
+              <Box>
+                <Button>Add to cart </Button>
+              </Box>
+            </GridItem>
+            <GridItem>
+              <img src={dresses} alt="..." className={imageClasses} />
+              <br></br>
+              <Button onclick={() => dispatch(increment(1))}>+</Button>
+              <Button color="primary">quantity</Button>
+              <Button onclick={() => dispatch(increment(1))}>-</Button>
+              <br></br>
+              <Box>
+                <Button>Add to cart </Button>
+              </Box>
+            </GridItem>
+          </GridContainer>
         </GridItem>
       </GridContainer>
     </div>
