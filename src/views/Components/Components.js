@@ -9,6 +9,9 @@ import { makeStyles } from "@material-ui/core/styles";
 // sections for this page
 import SectionNavbars from "./Sections/SectionNavbars.js";
 import SectionCarousel from "./Sections/SectionCarousel.js";
+import { createStore } from "redux";
+import allreducers from "reducers";
+import { Provider } from "react-redux";
 //import SectionLogin from "./Sections/SectionLogin.js";
 
 import styles from "assets/jss/material-kit-react/views/components.js";
@@ -16,14 +19,20 @@ import styles from "assets/jss/material-kit-react/views/components.js";
 import SectionTabs from "./Sections/SectionTabs.js";
 
 const useStyles = makeStyles(styles);
+const store = createStore(
+  allreducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 export default function Components() {
   const classes = useStyles();
   return (
-    <div className={classNames(classes.main, classes.mainRaised)}>
-      <SectionNavbars />
-      <SectionCarousel />
-      <SectionTabs />
-    </div>
+    <Provider store={store}>
+      <div className={classNames(classes.main, classes.mainRaised)}>
+        <SectionNavbars />
+        <SectionCarousel />
+        <SectionTabs />
+      </div>
+    </Provider>
   );
 }
