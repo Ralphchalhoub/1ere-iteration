@@ -7,6 +7,8 @@ import GridItem from "components/Grid/GridItem";
 import GridContainer from "components/Grid/GridContainer";
 import image1 from "assets/img/shirts.jpg";
 import dresses from "assets/img/shirt2.jpeg";
+import photosss from "assets/img/shirt3.jpeg";
+import photos from "assets/img/shirt4.jpeg";
 import classNames from "classnames";
 import { useSelector, useDispatch } from "react-redux";
 import { increment } from "actions";
@@ -44,6 +46,28 @@ export default function aboutsection() {
             </GridItem>
             <GridItem>
               <img src={dresses} alt="..." className={imageClasses} />
+              <br></br>
+              <Button onclick={() => dispatch(increment(1))}>+</Button>
+              <Button color="primary">quantity</Button>
+              <Button onclick={() => dispatch(increment(1))}>-</Button>
+              <br></br>
+              <Box>
+                <Button>Add to cart </Button>
+              </Box>
+            </GridItem>
+            <GridItem>
+              <img src={photosss} alt="..." className={imageClasses} />
+              <br></br>
+              <Button onclick={() => dispatch(increment(1))}>+</Button>
+              <Button color="primary">quantity</Button>
+              <Button onclick={() => dispatch(increment(1))}>-</Button>
+              <br></br>
+              <Box>
+                <Button>Add to cart </Button>
+              </Box>
+            </GridItem>
+            <GridItem>
+              <img src={photos} alt="..." className={imageClasses} />
               <br></br>
               <Button onclick={() => dispatch(increment(1))}>+</Button>
               <Button color="primary">quantity</Button>
