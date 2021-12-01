@@ -9,10 +9,17 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
+import Axios from "axios";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
 
 const useStyles = makeStyles(styles);
+
+const getinfoaboutproduct = () => {
+  Axios.get("http://localhost:8080/api/unlisted-items").then((response) => {
+    console.log(response);
+  });
+};
 
 export default function WorkSection() {
   const classes = useStyles();
@@ -60,7 +67,9 @@ export default function WorkSection() {
                 }}
               />
               <GridItem xs={12} sm={12} md={4}>
-                <Button color="primary">inform us</Button>
+                <Button onClick={getinfoaboutproduct} color="primary">
+                  inform us
+                </Button>
               </GridItem>
             </GridContainer>
           </form>

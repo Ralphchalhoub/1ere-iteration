@@ -17,7 +17,7 @@ import shirtspage from "views/shirtspage/shirts";
 import dressespage from "views/dressespage/dresses";
 import shoespage from "views/shoespage/shoes";
 import { createStore } from "redux";
-import allreducers from "reducers";
+import allreducers from "store/reducers";
 import { Provider } from "react-redux";
 
 var hist = createBrowserHistory();

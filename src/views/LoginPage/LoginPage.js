@@ -17,10 +17,17 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardFooter from "components/Card/CardFooter.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import { Link } from "react-router-dom";
+import Axios from "axios";
 
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
 const useStyles = makeStyles(styles);
+
+const loginaccess = () => {
+  Axios.get("http://localhost:8080/api/auth/signin").then((response) => {
+    console.log(response);
+  });
+};
 
 export default function LoginPage() {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
@@ -126,7 +133,9 @@ export default function LoginPage() {
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
                     <Link to={"/profile-page"} className={classes.link}>
-                      <Button color="primary">Login</Button>
+                      <Button onClick={loginaccess} color="primary">
+                        Login
+                      </Button>
                     </Link>
                   </CardFooter>
                 </form>

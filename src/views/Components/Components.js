@@ -10,7 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import SectionNavbars from "./Sections/SectionNavbars.js";
 import SectionCarousel from "./Sections/SectionCarousel.js";
 import { createStore } from "redux";
-import allreducers from "reducers";
+import allreducers from "../../store/reducers";
 import { Provider } from "react-redux";
 //import SectionLogin from "./Sections/SectionLogin.js";
 
