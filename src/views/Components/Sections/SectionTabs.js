@@ -8,11 +8,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/componentsSections/tabsStyle.js";
 // import GridContainer from "components/Grid/GridContainer";
 import { Button } from "@material-ui/core";
-import { ListItem } from "@material-ui/core";
-import GridItem from "components/Grid/GridItem";
-
-// import GridItem from "components/Grid/GridItem";
-import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(styles);
 
@@ -62,28 +57,8 @@ export default function SectionTabs() {
                 }}
               />
               <Button justIcon link className={classes.margin5}>
-                <i className={"fab fa-twitter"} />
-              </Button>
-              <Button justIcon link className={classes.margin5}>
                 <i className={"fab fa-instagram"} />
               </Button>
-              <Button justIcon link className={classes.margin5}>
-                <i className={"fab fa-facebook"} />
-              </Button>
-            </div>
-            <div>
-              <ListItem className={classes.listItem}>
-                <GridItem md={12} className={classes.textCenter}></GridItem>
-              </ListItem>
-              <ListItem className={classes.listItem}>
-                <GridItem md={12} className={classes.textCenter}>
-                  <Link to={"/register-page"} className={classes.link}>
-                    <Button color="default" size="mx" simple>
-                      Register
-                    </Button>
-                  </Link>
-                </GridItem>
-              </ListItem>
             </div>
           </nav>
         </div>

@@ -9,16 +9,13 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
-import Axios from "axios";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
 
 const useStyles = makeStyles(styles);
 
-const getinfoaboutproduct = () => {
-  Axios.get("http://localhost:8080/api/unlisted-items").then((response) => {
-    console.log(response);
-  });
+const addcardheandler = () => {
+  alert("description sent , we will respond as soon as possible");
 };
 
 export default function WorkSection() {
@@ -67,7 +64,7 @@ export default function WorkSection() {
                 }}
               />
               <GridItem xs={12} sm={12} md={4}>
-                <Button onClick={getinfoaboutproduct} color="primary">
+                <Button onClick={addcardheandler} color="primary">
                   inform us
                 </Button>
               </GridItem>

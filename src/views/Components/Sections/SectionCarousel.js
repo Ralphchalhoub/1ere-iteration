@@ -8,10 +8,15 @@ import { makeStyles } from "@material-ui/core/styles";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { CardActionArea } from "@mui/material";
 
-import image1 from "assets/img/photo1.jpeg";
-import image2 from "assets/img/photo2.jpeg";
-import image3 from "assets/img/photo3.jpeg";
+import image1 from "assets/img/dress1.jpeg";
+import image2 from "assets/img/dress1.jpeg";
+import image3 from "assets/img/dress1.jpeg";
+import image4 from "assets/img/boots.jpeg";
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
 
@@ -66,6 +71,24 @@ export default function SectionCarousel() {
                   </div>
                 </div>
               </Carousel>
+            </Card>
+            <Card sx={{ maxWidth: 150 }}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="500"
+                  image={image4}
+                  alt="green iguana"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    Boots
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    leaser boots customized for winter
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
             </Card>
           </GridItem>
         </GridContainer>

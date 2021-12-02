@@ -4,6 +4,7 @@ import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
+import Button from "components/CustomButtons/Button.js";
 
 // @material-ui/icons
 
@@ -40,8 +41,11 @@ export default function TeamSection() {
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                 <img src={image1} alt="..." className={imageClasses} />
               </GridItem>
+              <br></br>
               <Link to={"/shirts-page"} className={classes.link}>
-                shirts
+                <Button color="primary" font="15px" expand="sm">
+                  SHIRTS
+                </Button>
               </Link>
               {/* <CardFooter className={classes.justifyCenter}>
                 <Button
@@ -73,8 +77,11 @@ export default function TeamSection() {
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                 <img src={dresses} alt="..." className={imageClasses} />
               </GridItem>
+              <br></br>
               <Link to={"/dresses-page"} className={classes.link}>
-                Dresses
+                <Button color="primary" font="15px" expand="sm">
+                  DRESSES
+                </Button>
               </Link>
               {/* <CardBody>
                 <p className={classes.description}>
@@ -107,8 +114,11 @@ export default function TeamSection() {
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                 <img src={shoes} alt="..." className={imageClasses} />
               </GridItem>
+              <br></br>
               <Link to={"/shoes-page"} className={classes.link}>
-                Shoes
+                <Button color="primary" font="15px" expand="sm">
+                  SHOES
+                </Button>
               </Link>
               {/* <CardBody>
                 <p className={classes.description}>

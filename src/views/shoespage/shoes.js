@@ -1,61 +1,122 @@
 import React from "react";
 // nodejs library that concatenates classes
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
-import GridItem from "components/Grid/GridItem";
-import GridContainer from "components/Grid/GridContainer";
-import image1 from "assets/img/shoes.jpeg";
+// import { makeStyles } from "@material-ui/core/styles";
+// import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
+import { styled } from "@mui/material/styles";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell, { tableCellClasses } from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
 import shoes from "assets/img/shoes1.jpeg";
-import classNames from "classnames";
-import { useSelector, useDispatch } from "react-redux";
-import { increment } from "actions";
-import { Button } from "@material-ui/core";
-import { Box } from "@material-ui/core";
 
-const useStyles = makeStyles(styles);
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 14,
+  },
+}));
 
-export default function aboutsection() {
-  const classes = useStyles();
-  const counter = useSelector((state) => state.counter);
-  const dispatch = useDispatch();
-  const imageClasses = classNames(
-    classes.imgRaised,
-    classes.imgRoundedCircle,
-    classes.imgFluid
-  );
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  "&:nth-of-type(odd)": {
+    backgroundColor: theme.palette.action.hover,
+  },
+  // hide last border
+  "&:last-child td, &:last-child th": {
+    border: 0,
+  },
+}));
+
+function createData(item, color, description, price) {
+  return { item, color, description, price };
+}
+
+const rows = [createData("whiteshirt", "white", "", 159)];
+
+export default function CustomizedTables() {
   return (
-    <div className={classes.section}>
-      <GridContainer justify="center">
-        <GridItem cs={12} sm={12} md={8}>
-          <h2>lets make a difference</h2>
-          <GridContainer>
-            <GridItem>
-              <img src={image1} alt="..." className={imageClasses} />
-              <h1>quantity{counter}</h1>
-              <Button onclick={() => dispatch(increment(1))}>+</Button>
-              <Button type="button" color="primary">
-                quantity
-              </Button>
-              <Button onclick={() => dispatch(increment(1))}>-</Button>
-              <Box>
-                <Button>Add to cart </Button>
-              </Box>
-            </GridItem>
-            <GridItem>
-              <img src={shoes} alt="..." className={imageClasses} />
-              <br></br>
-              <Button onclick={() => dispatch(increment(1))}>+</Button>
-              <Button color="primary">quantity</Button>
-              <Button onclick={() => dispatch(increment(1))}>-</Button>
-              <br></br>
-              <Box>
-                <Button>Add to cart </Button>
-              </Box>
-            </GridItem>
-          </GridContainer>
-        </GridItem>
-      </GridContainer>
-    </div>
+    <TableContainer component={Paper}>
+      <img src={shoes} alt="..." />
+      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            <StyledTableCell>shirts</StyledTableCell>
+            <StyledTableCell align="right">item</StyledTableCell>
+            <StyledTableCell align="right">color</StyledTableCell>
+            <StyledTableCell align="right">comments</StyledTableCell>
+            <StyledTableCell align="right">price&nbsp;($)</StyledTableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <StyledTableRow key={row.name}>
+              <StyledTableCell component="th" scope="row">
+                {row.name}
+              </StyledTableCell>
+              <StyledTableCell align="right">{row.item}</StyledTableCell>
+              <StyledTableCell align="right">{row.color}</StyledTableCell>
+              <StyledTableCell align="right">{row.description}</StyledTableCell>
+              <StyledTableCell align="right">{row.price}</StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+      <img src={shoes} alt="..." />
+      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            <StyledTableCell>shirts</StyledTableCell>
+            <StyledTableCell align="right">item</StyledTableCell>
+            <StyledTableCell align="right">color</StyledTableCell>
+            <StyledTableCell align="right">comments</StyledTableCell>
+            <StyledTableCell align="right">price&nbsp;($)</StyledTableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <StyledTableRow key={row.name}>
+              <StyledTableCell component="th" scope="row">
+                {row.name}
+              </StyledTableCell>
+              <StyledTableCell align="right">{row.item}</StyledTableCell>
+              <StyledTableCell align="right">{row.color}</StyledTableCell>
+              <StyledTableCell align="right">{row.description}</StyledTableCell>
+              <StyledTableCell align="right">{row.price}</StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+      <img src={shoes} alt="..." />
+      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            <StyledTableCell>shirts</StyledTableCell>
+            <StyledTableCell align="right">item</StyledTableCell>
+            <StyledTableCell align="right">color</StyledTableCell>
+            <StyledTableCell align="right">comments</StyledTableCell>
+            <StyledTableCell align="right">price&nbsp;($)</StyledTableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <StyledTableRow key={row.name}>
+              <StyledTableCell component="th" scope="row">
+                {row.name}
+              </StyledTableCell>
+              <StyledTableCell align="right">{row.item}</StyledTableCell>
+              <StyledTableCell align="right">{row.color}</StyledTableCell>
+              <StyledTableCell align="right">{row.description}</StyledTableCell>
+              <StyledTableCell align="right">{row.price}</StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 }

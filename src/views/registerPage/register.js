@@ -17,19 +17,23 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardFooter from "components/Card/CardFooter.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import { Link } from "react-router-dom";
-import Axios from "axios";
+import { useState } from "react";
 
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
 const useStyles = makeStyles(styles);
 
-const Registeraccess = () => {
-  Axios.get("http://localhost:8080/api/auth/signup").then((response) => {
-    console.log(response);
-  });
+// const [registers,setregister]=useState([]);
+// const [email,setemail]=useState("");
+// const [password,setpassword]=useState("");
+// const [passwordveri,setpasswordveri]=useState("");
+
+const addcardheandler = () => {
+  alert("registered seccessfully");
 };
 
 export default function LoginPage() {
+  const [firstname, setfirstname] = useState("");
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
   setTimeout(function () {
     setCardAnimation("");
@@ -96,6 +100,8 @@ export default function LoginPage() {
                           </InputAdornment>
                         ),
                       }}
+                      onchange={(e) => setfirstname(e.target.value)}
+                      value={firstname}
                     />
                     <CustomInput
                       labelText="Email..."
@@ -151,7 +157,7 @@ export default function LoginPage() {
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
                     <Link className={classes.link}>
-                      <Button onClick={Registeraccess} color="primary">
+                      <Button onClick={addcardheandler} color="primary">
                         Register
                       </Button>
                     </Link>

@@ -5,10 +5,9 @@ import { Link } from "react-router-dom";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 // @material-ui/icons
-import Search from "@material-ui/icons/Search";
+// import Search from "@material-ui/icons/Search";
 // core components
 import Header from "components/Header/Header.js";
-import CustomInput from "components/CustomInput/CustomInput.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 
@@ -34,19 +33,14 @@ export default function SectionNavbars() {
           leftLinks={
             <List className={classes.list}>
               <ListItem className={classes.listItem}>
-                <Button
-                  href="#pablo"
-                  className={classes.navLink}
-                  onClick={(e) => e.preventDefault()}
-                  color="transparent"
-                >
+                <Button color="default" expand="sm" simple>
                   Home
                 </Button>
               </ListItem>
               <ListItem className={classes.listItem}>
                 <GridItem md={12} className={classes.textCenter}>
                   <Link to={"/Landing-Page"} className={classes.link}>
-                    <Button color="default" size="mx" simple>
+                    <Button color="default" expand="sm" simple>
                       Products
                     </Button>
                   </Link>
@@ -55,20 +49,16 @@ export default function SectionNavbars() {
               <ListItem className={classes.listItem}>
                 <GridItem md={12} className={classes.textCenter}>
                   <Link to={"/About-Page"} className={classes.link}>
-                    <Button color="default" size="mx" simple>
+                    <Button color="default" expand="sm" simple>
                       About
                     </Button>
                   </Link>
                 </GridItem>
               </ListItem>
-            </List>
-          }
-          rightLinks={
-            <div>
               <ListItem className={classes.listItem}>
                 <GridItem md={12} className={classes.textCenter}>
                   <Link to={"/bag-page"} className={classes.link}>
-                    <Button color="default" size="mx" simple>
+                    <Button color="default" expand="sm" simple>
                       Bag
                     </Button>
                   </Link>
@@ -77,30 +67,22 @@ export default function SectionNavbars() {
               <ListItem className={classes.listItem}>
                 <GridItem md={12} className={classes.textCenter}>
                   <Link to={"/login-page"} className={classes.link}>
-                    <Button color="default" size="mx" simple>
+                    <Button color="default" expand="sm" simple>
                       profile
                     </Button>
                   </Link>
                 </GridItem>
               </ListItem>
-              <CustomInput
-                white
-                inputRootCustomClasses={classes.inputRootCustomClasses}
-                formControlProps={{
-                  className: classes.formControl,
-                }}
-                inputProps={{
-                  placeholder: "Search",
-                  inputProps: {
-                    "aria-label": "Search",
-                    className: classes.searchInput,
-                  },
-                }}
-              />
-              <Button justIcon round color="white">
-                <Search className={classes.searchIcon} />
-              </Button>
-            </div>
+              <ListItem className={classes.listItem}>
+                <GridItem md={12} className={classes.textCenter}>
+                  <Link to={"/register-page"} className={classes.link}>
+                    <Button color="default" expand="sm" simple>
+                      Register
+                    </Button>
+                  </Link>
+                </GridItem>
+              </ListItem>
+            </List>
           }
         />
       </div>
