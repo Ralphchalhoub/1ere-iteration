@@ -11,7 +11,10 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import shoes from "assets/img/shoes1.jpeg";
+import dresses from "assets/img/dresses.jpg";
+import { Button } from "@material-ui/core";
+import dress2 from "assets/img/dress2.jpeg";
+import dress1 from "assets/img/dress1.jpeg";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -36,13 +39,12 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 function createData(item, color, description, price) {
   return { item, color, description, price };
 }
-
 const rows = [createData("whiteshirt", "white", "", 159)];
 
 export default function CustomizedTables() {
   return (
     <TableContainer component={Paper}>
-      <img src={shoes} alt="..." />
+      <img src={dresses} alt="..." />
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
@@ -66,8 +68,16 @@ export default function CustomizedTables() {
             </StyledTableRow>
           ))}
         </TableBody>
+        <Button>+</Button>
+        <Button>-</Button>
+        <Button color="white" font="15px" background-color="black" expand="sm">
+          add to cart
+        </Button>
+        <br></br>
+        <br></br>
+        <br></br>
       </Table>
-      <img src={shoes} alt="..." />
+      <img src={dress2} alt="..." />
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
@@ -91,8 +101,16 @@ export default function CustomizedTables() {
             </StyledTableRow>
           ))}
         </TableBody>
+        <Button>+</Button>
+        <Button>-</Button>
+        <Button color="white" font="15px" background-color="black" expand="sm">
+          add to cart
+        </Button>
+        <br></br>
+        <br></br>
+        <br></br>
       </Table>
-      <img src={shoes} alt="..." />
+      <img src={dress1} alt="..." />
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
@@ -116,6 +134,14 @@ export default function CustomizedTables() {
             </StyledTableRow>
           ))}
         </TableBody>
+        <Button>+</Button>
+        <Button>-</Button>
+        <Button color="white" font="15px" background-color="black" expand="sm">
+          add to cart
+        </Button>
+        <br></br>
+        <br></br>
+        <br></br>
       </Table>
     </TableContainer>
   );

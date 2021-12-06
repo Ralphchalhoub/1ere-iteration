@@ -33,11 +33,10 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("shirts", 15, "pink", "oversized", 4.0),
+  createData("shoes", 2, "black", "smooth", 4.3),
+  createData("dresses", 5, "white", "traditional", 6.0),
+  createData("Customized item", 2, "", "as you like it", 4.3),
 ];
 
 export default function CustomizedTables() {
@@ -47,7 +46,7 @@ export default function CustomizedTables() {
         <TableHead>
           <TableRow>
             <StyledTableCell>items</StyledTableCell>
-            <StyledTableCell align="right">item name</StyledTableCell>
+            <StyledTableCell align="right">quantities</StyledTableCell>
             <StyledTableCell align="right">color</StyledTableCell>
             <StyledTableCell align="right">description</StyledTableCell>
             <StyledTableCell align="right">Price&nbsp;($)</StyledTableCell>

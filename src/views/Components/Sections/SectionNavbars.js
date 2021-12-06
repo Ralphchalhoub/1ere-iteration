@@ -59,7 +59,7 @@ export default function SectionNavbars() {
                 <GridItem md={12} className={classes.textCenter}>
                   <Link to={"/bag-page"} className={classes.link}>
                     <Button color="default" expand="sm" simple>
-                      Bag
+                      Cart
                     </Button>
                   </Link>
                 </GridItem>
